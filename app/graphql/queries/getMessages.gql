@@ -1,0 +1,10 @@
+query GetMessages {
+  messages {
+    id
+    applications
+    title
+    content
+    published
+    startingDate
+  }
+}

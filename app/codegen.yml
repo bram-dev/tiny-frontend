@@ -1,0 +1,23 @@
+overwrite: true
+schema:
+  - "http://localhost:4000/graphql"
+documents: "./graphql/**/*.gql"
+generates:
+  graphql/schema.tsx:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      useIndexSignature: true
+      useTypeImports: true
+      withHooks: false
+      reactApolloVersion: 3
+  app/graphql/schema.graphql:
+    plugins:
+      - schema-ast
+    config:
+      commentDescriptions: true
+hooks:
+  afterAllFileWrite:
+    - prettier --write

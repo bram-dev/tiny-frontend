@@ -7,12 +7,30 @@
     "generate:css": "tailwindcss -o ./dist/styles/tailwind.css",
     "preview": "vite preview",
     "deploy": "npm run build && node deploy/deploy.js",
-    "lint": "eslint --fix"
+    "lint": "eslint --fix",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "@apollo/client": "^3.7.9",
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@graphql-codegen/cli": "^3.2.1",
+    "@graphql-codegen/schema-ast": "^3.0.1",
+    "@graphql-codegen/typescript": "^3.0.1",
+    "@graphql-codegen/typescript-operations": "^3.0.1",
+    "@graphql-codegen/typescript-react-apollo": "^3.3.7",
+    "@tailwindcss/typography": "^0.5.9",
+    "@tiptap/extension-font-family": "^2.0.0-beta.218",
+    "@tiptap/extension-text-style": "^2.0.0-beta.218",
+    "@tiptap/extension-underline": "^2.0.0-beta.218",
+    "@tiptap/pm": "^2.0.0-beta.218",
+    "@tiptap/react": "^2.0.0-beta.218",
+    "@tiptap/starter-kit": "^2.0.0-beta.218",
+    "classnames": "^2.3.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-headless-pagination": "^1.1.4"
   },
   "eslintConfig": {
     "extends": [
