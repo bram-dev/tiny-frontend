@@ -1,52 +1,12 @@
-import React, { useEffect, useState } from "react";
+import { gql, useQuery } from "@apollo/client"
 
-import { ExampleTinyFrontendProps } from "../../contract/src/props";
-import { Button } from "./button";
-import styles from "./index.module.css";
-
-const ExampleTinyFrontend: React.FC<ExampleTinyFrontendProps> = ({
-  name,
-  onCounterChange,
-}) => {
-  const [value, setValue] = useState(0);
-
-  useEffect(() => onCounterChange?.(value), [value, onCounterChange]);
-
+export default function ExampleTinyFrontend() {
+  const { data } = useQuery(gql`query {messages {id, applications, title, content,  published, startingDate}}`)
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Hello {name}! 🎉</h1>
-
-      <div className={styles.descriptionContainer}>
-        <p>
-          I&apos;m a{" "}
-          <a
-            href="https://tiny-frontend.github.io"
-            target="_blank"
-            rel="noreferrer"
-          >
-            tiny frontend
-          </a>{" "}
-          🐰 , I was deployed from{" "}
-          <a
-            href="https://github.com/tiny-frontend/example-tiny-frontend"
-            target="_blank"
-            rel="noreferrer"
-          >
-            this git repository
-          </a>
-          . I&apos;m just a regular React component, but my implementation was
-          loaded at runtime!
-        </p>
-        <p>
-          You pressed my button <strong>{value} times</strong>!
-        </p>
-      </div>
-
-      <Button onClick={() => setValue((value) => value + 1)}>
-        Press me Remix Europe!
-      </Button>
-    </div>
-  );
-};
-
-export default ExampleTinyFrontend;
+    <>
+      <h1 className="text-xl">
+        {JSON.stringify(data)}
+      </h1>
+    </>
+  )
+}

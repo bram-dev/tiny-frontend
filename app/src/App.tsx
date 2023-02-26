@@ -1,5 +1,19 @@
+import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from "@apollo/client";
 import ExampleTinyFrontend from "../lib";
 
-const App = () => <ExampleTinyFrontend name={"Test"} />;
+const httpLink = createHttpLink({
+  uri: 'http://localhost:4000/graphql',
+})
 
-export default App;
+const client = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache(),
+})
+
+export default function App() {
+  return (
+    <ApolloProvider client={client}>
+      <ExampleTinyFrontend />
+    </ApolloProvider>
+  )
+}
