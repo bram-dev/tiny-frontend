@@ -23,7 +23,7 @@ await deployBundle({
     "../dist/example-tiny-frontend.umd.js",
     import.meta.url
   ).pathname,
-  cssBundlePath: new URL("../dist/style.css", import.meta.url).pathname,
+  cssBundlePath: new URL("../dist/styles/tailwind.css", import.meta.url).pathname,
   cloudflare: {
     accountIdentifier: process.env.CF_ACCOUNT_ID,
     apiToken: process.env.CF_API_TOKEN,

@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && npm run generate:css -- --minify",
+    "generate:css": "tailwindcss -o ./dist/styles/tailwind.css",
     "preview": "vite preview",
     "deploy": "npm run build && node deploy/deploy.js",
     "lint": "eslint --fix"
