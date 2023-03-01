@@ -20,25 +20,25 @@ export function Alert({
   className,
 }: AlertProps) {
   const styling = classNames(
-    "p-3 flex items-center rounded-md",
+    "taa-p-3 flex taa-items-center taa-rounded-md",
     {
-      "bg-blue-100 text-blue-700": type === "info",
-      "bg-red-100 text-red-700": type === "danger",
-      "bg-orange-100 text-orange-700": type === "warning",
-      "bg-green-100 text-green-800": type === "success",
-      "bg-black-100 text-black-700": type === "dark",
+      "taa-bg-blue-100 taa-text-blue-700": type === "info",
+      "taa-bg-red-100 taa-text-red-700": type === "danger",
+      "taa-bg-orange-100 taa-text-orange-700": type === "warning",
+      "taa-bg-green-100 taa-text-green-800": type === "success",
+      "taa-bg-black-100 taa-text-black-700": type === "dark",
     },
     className
   );
 
   return (
     <div className={styling}>
-      {icon && <FontAwesomeIcon icon={icon} className="mr-2" fixedWidth />}
+      {icon && <FontAwesomeIcon icon={icon} className="taa-mr-2" fixedWidth />}
 
-      <span className="text-md">{children}</span>
+      <span className="taa-text-md">{children}</span>
 
       {onClose && (
-        <button className="ml-auto justify-end self-end pl-2" onClick={onClose}>
+        <button className="taa-ml-auto taa-justify-end taa-self-end taa-pl-2" onClick={onClose}>
           <FontAwesomeIcon icon={faTimes} />
         </button>
       )}

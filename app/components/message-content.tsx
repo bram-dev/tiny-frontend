@@ -38,7 +38,7 @@ export function MessageContentComponent({
     editorProps: {
       attributes: {
         class:
-          "w-full pl-4 prose prose-sm pt-2 focus:outline-none",
+          "taa-w-full taa-pl-4 taa-prose taa-prose-sm taa-pt-2 focus:taa-outline-none",
       },
     },
     content: message?.content,
@@ -47,27 +47,27 @@ export function MessageContentComponent({
 
   return (
     <Card.Empty>
-      <div className="p-4">
+      <div className="taa-p-4">
         <button
-          className="relative inline-flex items-center rounded-lg border border-gray-700 py-2.5 pr-5 pl-3 text-center text-sm font-medium text-gray-700 hover:bg-gray-200 hover:text-gray-700 focus:outline-none"
+          className="taa-relative taa-inline-flex taa-items-center taa-rounded-lg taa-border taa-border-gray-700 taa-py-2.5 taa-pr-5 taa-pl-3 taa-text-center taa-text-sm taa-font-medium taa-text-gray-700 hover:taa-bg-gray-200 hover:taa-text-gray-700 focus:taa-outline-none"
           onClick={() => {
             setIsOpenMessage(false), setMessageContent(<></>);
           }}
         >
-          <FontAwesomeIcon icon={faArrowLeftLong} className="mr-3 h-5 w-5" />
+          <FontAwesomeIcon icon={faArrowLeftLong} className="taa-mr-3 taa-h-5 taa-w-5" />
           Vorige
         </button>
-        <div className="flex flex-col pt-2 gap-2 divide-y">
-          <div className="flex flex-col">
-            <span className="text-2xl text-gray-900">{message?.title}</span>
-            <span className="flex items-end	 text-[0.8rem] text-gray-600">
+        <div className="taa-flex taa-flex-col taa-pt-2 taa-gap-2 taa-divide-y">
+          <div className="taa-flex taa-flex-col">
+            <span className="taa-text-2xl taa-text-gray-900">{message?.title}</span>
+            <span className="taa-flex taa-items-end	 taa-text-[0.8rem] taa-text-gray-600">
               {new Date(message?.startingDate).toLocaleDateString(
                 "nl-NL",
                 options
               )}
             </span>
           </div>
-          <div className="text-sm text-gray-500">
+          <div className="taa-text-sm taa-text-gray-500">
             <EditorContent editor={editor} />
           </div>
         </div>

@@ -4,6 +4,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
+  prefix: 'taa-',
   content: [
     "./index.html",
     "./components/**/*.{js,ts,jsx,tsx}",

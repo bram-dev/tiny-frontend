@@ -41,23 +41,23 @@ export function Card({
   return (
     <div
       className={classNames(
-        "w-full bg-white shadow-[0_1px_3px_-1px_rgba(0,0,0,0.2)]",
+        "taa-w-full taa-bg-white taa-shadow-[0_1px_3px_-1px_rgba(0,0,0,0.2)]",
         className
       )}
     >
       {title && (
-        <div className="border-w-1 flex w-full items-center border-b border-gray-300 p-4 text-black-700">
+        <div className="taa-border-w-1 taa-flex taa-w-full taa-items-center taa-border-b taa-border-gray-300 taa-p-4 taa-text-black-700">
           {icon && (
-            <div className="pr-3 text-lg">
+            <div className="taa-pr-3 taa-text-lg">
               <FontAwesomeIcon icon={icon} size="lg" fixedWidth />
             </div>
           )}
 
-          <div className="flex flex-col overflow-hidden">
-            <h2 className="truncate text-lg font-medium leading-none text-black-500">
+          <div className="taa-flex taa-flex-col taa-overflow-hidden">
+            <h2 className="taa-truncate taa-text-lg taa-font-medium taa-leading-none taa-text-black-500">
               {title}
             </h2>
-            <h3 className="truncate text-xs font-normal text-gray-700">
+            <h3 className="taa-truncate taa-text-xs taa-font-normal taa-text-gray-700">
               {subTitle}
             </h3>
           </div>

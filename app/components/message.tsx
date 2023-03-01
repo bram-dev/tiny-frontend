@@ -18,13 +18,13 @@ interface Props {
 
 export function MessageListItem({ message }: Props) {
   return (
-      <div className="cursor-pointer p-4 hover:bg-gray-200">
-        <div className="relative inline-flex w-full justify-between">
-          <div className="flex flex-col gap-1">
-            <div className="flex items-center">
-              <span className="text-md text-gray-900">{message?.title}</span>
+      <div className="taa-cursor-pointer taa-p-4 hover:taa-bg-gray-200">
+        <div className="taa-relative taa-inline-flex taa-w-full taa-justify-between">
+          <div className="taa-flex taa-flex-col taa-gap-1">
+            <div className="taa-flex taa-items-center">
+              <span className="taa-text-md taa-text-gray-900">{message?.title}</span>
             </div>
-            <span className="text-[0.8rem] text-gray-600">
+            <span className="taa-text-[0.8rem] taa-text-gray-600">
               {new Date(message?.startingDate).toLocaleDateString(
                 "nl-NL",
                 options

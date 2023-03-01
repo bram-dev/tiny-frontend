@@ -56,7 +56,7 @@ export default function ExampleTinyFrontend() {
           ) : (
             currentMessages!.length > 0 && (
               <Card.Empty>
-                <div className="divide-y p-4">
+                <div className="taa-divide-y taa-p-4">
                   {currentMessages!.map((message) => (
                     <div
                       onClick={() => {
@@ -75,7 +75,7 @@ export default function ExampleTinyFrontend() {
                   ))}
                 </div>
                 {messages!.length > 5 && (
-                  <div className="border-t border-gray-300 p-4">
+                  <div className="taa-border-t taa-border-gray-300 taa-p-4">
                     <Pagination
                       currentMessages={currentMessages}
                       page={page}
@@ -97,12 +97,12 @@ export default function ExampleTinyFrontend() {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="rounded flex justify-center items-center bg-blue-700 p-3 hover:bg-blue-800 focus:outline-none"
+        className="taa-rounded taa-flex taa-justify-center taa-items-center taa-bg-blue-700 taa-p-3 hover:taa-bg-blue-800 focus:taa-outline-none"
       >
-        <FontAwesomeIcon icon={faBell} className="h-4 w-4 text-white" />
+        <FontAwesomeIcon icon={faBell} className="taa-h-4 taa-w-4 taa-text-white" />
       </button>
       {isOpen && (
-        <Card className="relative border rounded-lg max-w-[500px] mt-1 z-50">
+        <Card className="taa-relative taa-border taa-rounded-lg taa-max-w-[500px] taa-mt-1 taa-z-50">
           {isOpenMessage ? <>{messageContent}</> : <>{messagesList}</>}
         </Card>
       )}

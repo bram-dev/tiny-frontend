@@ -36,37 +36,37 @@ export function PaginationComponent({
 
   return (
     <Pagination
-      className="flex h-10 w-full select-none items-center justify-end text-sm"
+      className="taa-flex taa-h-10 taa-w-full taa-select-none taa-items-center taa-justify-end taa-text-sm"
       currentPage={page}
       edgePageCount={1}
       middlePagesSiblingCount={1}
       setCurrentPage={handlePageChange}
       totalPages={totalPages}
-      truncableClassName="w-10 px-0.5 text-center"
+      truncableClassName="taa-w-10 taa-px-0.5 taa-text-center"
       truncableText="..."
     >
       <PrevButton
         className={`${
-          page === 0 ? "opacity-50" : ""
-        } ml-2 flex items-center text-gray-500 hover:text-gray-600 focus:outline-none`}
+          page === 0 ? "taa-opacity-50" : ""
+        } taa-ml-2 taa-flex taa-items-center taa-text-gray-500 hover:taa-text-gray-600 focus:taa-outline-none`}
       >
-        <FontAwesomeIcon className="mr-3 h-5 w-5" icon={faChevronLeft} />
+        <FontAwesomeIcon className="taa-mr-3 taa-h-5 taa-w-5" icon={faChevronLeft} />
         Vorige
       </PrevButton>
-      <div className="flex flex-grow list-none items-center justify-center">
+      <div className="taa-flex taa-flex-grow taa-list-none taa-items-center taa-justify-center">
         <PageButton
-          activeClassName="bg-gray-500 text-primary-600 text-gray-900"
-          className="flex h-6 w-6 cursor-pointer items-center justify-center rounded-full"
-          inactiveClassName="text-gray-500"
+          activeClassName="taa-bg-gray-500 taa-text-primary-600 taa-text-gray-900"
+          className="taa-flex taa-h-6 taa-w-6 taa-cursor-pointer taa-items-center taa-justify-center taa-rounded-full"
+          inactiveClassName="taa-text-gray-500"
         />
       </div>
       <NextButton
         className={`${
-          page === totalPages - 1 ? "opacity-50" : ""
-        } ml-2 flex items-center text-gray-500 hover:text-gray-600 focus:outline-none`}
+          page === totalPages - 1 ? "taa-opacity-50" : ""
+        } taa-ml-2 taa-flex taa-items-center taa-text-gray-500 hover:taa-text-gray-600 focus:taa-outline-none`}
       >
         Volgende
-        <FontAwesomeIcon className="ml-3 h-5 w-5" icon={faChevronRight} />
+        <FontAwesomeIcon className="taa-ml-3 taa-h-5 taa-w-5" icon={faChevronRight} />
       </NextButton>
     </Pagination>
   );
